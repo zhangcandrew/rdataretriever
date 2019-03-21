@@ -516,7 +516,7 @@ print.update_log = function(x, ...) {
 
 set_home = function(...) {
   current_home = normalizePath(Sys.getenv('HOME'), winslash = "/")
-  Sys.setenv(HOME = gsub("/Documents", "", Sys.getenv('HOME')))
+  Sys.setenv(HOME = gsub("/Documents", "", ignore.case = TRUE, Sys.getenv('HOME')))
 }
 
 check_retriever_import = function(){
